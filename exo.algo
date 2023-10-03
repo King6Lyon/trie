@@ -1,0 +1,13 @@
+PROCEDURE tri_par_insertion(arr[])
+VAR
+    i, j, elt_ins :INTEGER
+BEGIN
+    FOR i FROM 1 TO len(arr[]-1) STEP 1  DO
+        j := i - 1
+        WHILE (j >= 0 and elt_ins < arr[j]) DO
+            arr[j+1] = arr[j]
+            j = j - 1
+        END_WHILE
+        arr[j + 1] = elt_ins
+    END_FOR
+END
